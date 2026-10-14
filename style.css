@@ -1,29 +1,47 @@
+:root{ 
+    --skyblue: rgba(186, 225, 255)
+}
+
+
 *{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
+html{
+    scroll-behavior: smooth;
+}
 body{
     font-family: 'poppins',sans-serif;
+    color: #0f172a;
+   line-height: 1.6;
 }
 
 header{
+    position: sticky;
+    top: 0;
+    z-index: 100;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 20px 8%;
+    padding: 16px 8%;
+    border-bottom: 1px solid #e0f2fe;
     
 }
 .logo{
     text-decoration: none;
-    color: black;
-    font-size: large;
-    font-weight: bold;
-    letter-spacing: 1px;
+    color: #082057;
+    font-size: 30px;
+    font-weight: 700;
+    letter-spacing: 0.5px;
     display: block;
-    
     transition: transform 0.3s ease;
 
+}
+.logo span{
+    color:#0284c7 ;
+    font-size: 38px;
+    line-height: 0;
 }
 .logo:hover{
     transform: translateY(-4px);
@@ -41,10 +59,227 @@ nav ul a{
     transition: transform 0.3s ease;
     padding: 8px 15px;
     border-radius: 4px;
+    font-weight: 500;
+    transition: background 0.3s ease, color 0.3s ease;
     
 }
 nav ul a:hover{
-    background-color: rgb(163, 217, 255);
+    background: var(--skyblue);
     color: white;
+    font-weight: bold;
    
+}
+.hero{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 40px;
+    padding: 40px 8%;
+    min-height: calc(100vh - 70px);
+    flex-wrap: wrap;
+}
+.hero-container{
+    flex: 1;
+    font-size: 20px;
+    max-width: 600px;
+}
+.hero-container h3{
+    font-size: 22px;
+    font-weight: 500;
+    color: #475569;
+}
+h3 span{
+    color: #0b0b0b;
+    font-weight: 600;
+    font-size: 28px;
+}
+.hero-container h1{
+    font-size: 37px;
+    font-weight: 600;
+    margin: 5px 0 10px;
+    min-height: 1.1;
+    color: rgb(103, 145, 220);
+}
+.hero-container p{
+    margin: 18px 0 26px ;
+    font-size: 17px;
+    color: #475569;
+    max-width: 500px;
+
+}
+
+<!--social_icons--->
+
+.social-icons{
+    display: flex;
+    gap: 14px;
+    margin-bottom: 30px;
+    
+}
+.social-icons a{
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 44px;
+    height: 44px;
+    color: #0284c7;
+    font-size: 22px;
+    text-decoration: none;
+     border-radius: 70%;
+     transition: background 0.3s ease, color 0.3s ease, transform 0.3s ease;
+    
+}
+.social-icons a:hover{
+   transform: translateY(-4px);
+   background: var(--skyblue);
+   color: white;
+   border-radius: 70%;
+
+}
+
+.contact-btn{
+    display: inline-block;
+    padding: 14px 36px;
+    background-color: #629ae8;
+   
+    font-weight: 600;
+    text-decoration: none;
+    border-radius: 50px;
+    box-shadow: 0 8px 20px rgba(2, 132, 199, 0.3);
+    transition: background 0.3s ease, transform 0.3s ease;
+
+
+}
+.contact-btn a{
+    text-decoration: none;
+    color: #ffffff;
+}
+.contact-btn:hover{
+   
+   transform: scale(1.1);
+}
+
+.hero-img{
+    flex: 0 0 380px;
+  max-width: 100%;
+
+}
+.hero-img img{
+    display: block;
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    border-radius: 50%;
+    /* filter: drop-shadow(0 20px 30px rgba(2, 132, 199, 0.25));
+    animation: fadeIn 0.9s ease both; */
+}
+
+  .typing {
+  color: #0d9488;
+}
+
+.typing::after {
+  content: "";
+  display: inline-block;
+  width: 3px;
+  height: 1em;
+  margin-left: 4px;
+  background: #0d9488;
+  vertical-align: text-bottom;
+  animation: blink 0.8s steps(1) infinite;
+}
+
+/* ---------- Normal laptop (1001px to 1366px) ---------- */
+@media (min-width: 1001px) and (max-width: 1366px) {
+  .hero-container h1 {
+    font-size: 48px;
+  }
+
+  .hero-img {
+    flex: 0 0 340px;
+  }
+}
+
+/* ---------- Tablet (up to 1000px) ---------- */
+@media (max-width: 1000px) {
+  .hero {
+    gap: 30px;
+  }
+
+  .hero-container h1 {
+    font-size: 42px;
+  }
+
+  .hero-container h3 {
+    font-size: 22px;
+  }
+
+  .hero-container p {
+    font-size: 16px;
+  }
+
+  .hero-img {
+    flex: 0 0 300px;
+  }
+}
+
+/* ---------- Mobile (up to 700px) ---------- */
+@media (max-width: 700px) {
+  header {
+    flex-direction: column;
+    gap: 10px;
+    padding: 14px 5%;
+  }
+
+  nav ul {
+    gap: 6px;
+  }
+
+  .hero {
+    flex-direction: column-reverse;   /* picture on top, text below */
+    text-align: center;
+    padding: 30px 6% 50px;
+    min-height: auto;
+  }
+
+  .hero-container h1 {
+    font-size: 34px;
+  }
+
+  .hero-container h3 {
+    font-size: 20px;
+  }
+
+  .hero-container p {
+    font-size: 15px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .social-icons {
+    justify-content: center;
+  }
+
+  .hero-img {
+    flex: none;
+    width: 240px;
+  }
+}
+
+/* ---------- Small phones (up to 400px) ---------- */
+@media (max-width: 400px) {
+  .hero-container h1 {
+    font-size: 30px;
+  }
+
+  .hero-img {
+    width: 200px;
+  }
+}
+
+
+@keyframes blink {
+  50% {
+    opacity: 0;
+  }
 }
