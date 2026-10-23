@@ -417,6 +417,137 @@ h3 span{
 
 /*CONTACT SECTION*/
 
+.contact-section{
+  width: 100%;
+  min-height: 100vh;
+ padding: 60px 8%;
+ display: flex;
+ flex-direction: column;
+ justify-content: center;
+ align-items: center;
+ box-sizing: border-box;
+}
+.contact-container{
+  
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 50px;
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+.contact-left{
+  flex-basis: 35%;
+}
+.contact-left h2{
+  font-size: 38px;
+  color: #4b5563;
+  margin-bottom: 10pxpx;
+  font-weight: 700;
+
+}
+.contact-text{
+  font-size: 16px;
+  line-height: 1.6;
+  color: #64748b;
+  margin-bottom: 25px;
+}
+.contact-info{
+  font-size: 16px;
+  color: #4b5563;
+  margin-bottom: 20px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+.contact-info i{
+color: #2563eb;
+font-size: 18px;
+}
+.social-icons-contact{
+    display: flex;
+  gap: 15px;
+  margin: 25px 0;
+}
+.social-icons-contact a{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  background-color: #ffffff;
+  color: #2563eb;
+  border-radius: 50%;
+  text-decoration: none;
+  border: 1px solid #bfdbfe;
+  box-shadow: 0 4px 10px rgba(37, 99, 235, 0.5);
+  transition: all 0.3s ease;
+}
+.social-icons-contact a:hover{
+  background-color: #2563eb;
+  color: #ffffff;
+  transform: translateY(-3px);
+}
+
+/*RIGHT SIDE CONTACT */
+
+.contact-right{
+  flex-basis: 55%;
+}
+.contact-right form{
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  
+}
+
+.contact-right input,
+.contact-right textarea{
+  width: 100%;
+  padding: 15px 20px;
+  background-color: #ffffff;
+  border: 1px solid #bfdbfe;
+  border-radius: 10px;
+  font-size: 15px;
+  color: #1f2937;
+  outline: none;
+  box-sizing: border-box;
+  box-shadow: 0 2px 8px rgba(37, 99, 235, 0.03);
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+.contact-right input:focus
+.contact-right textarea:focus{
+  border-color: #2563eb;
+  box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.15);
+}
+.btn-submit{
+  padding: 14px 30px;
+  background-color: #1195d7;
+  color: #ffffff;
+  border: none;
+  border-radius: 10px;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+ box-shadow: 0 6px 15px rgba(37, 99, 235, 0.2);
+ transition: background-color 0.3s ease, transform 0.3s ease;
+}
+.btn-submit:hover{
+  background-color: #1d4ed8;
+  transform: translateY(-2px);
+}
+.footer{
+  text-align: center;
+  padding: 20px 0;
+  font-size: 14px;
+  color: #6b7280;
+  border-top: 1px solid #dbeafe;
+  margin-top: 40px;
+  width: 100%;
+}
+
+
 
 
 /* ---------- Normal laptop (1001px to 1366px) ---------- */
