@@ -23,3 +23,4 @@ function type() {
     setTimeout(type, 400);
   }
 }
+type();
